@@ -81,7 +81,7 @@ public class CalculatorTest {
 
     @Test
     public void cannotProcessIfExpressionNotLoaded() {
-        thrown.expect(RuntimeException.class);
+        thrown.expect(CalculatorException.class);
         calculator.process();
     }
 

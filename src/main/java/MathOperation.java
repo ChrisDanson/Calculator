@@ -18,7 +18,7 @@ public enum MathOperation implements Calculation {
 
     private Calculation calculation;
 
-    private MathOperation(Calculation calculation) {
+    MathOperation(Calculation calculation) {
         this.calculation = calculation;
     }
 
