@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.Arrays;
 
 public class CalculatorMain {
 
@@ -7,15 +6,16 @@ public class CalculatorMain {
 
         var calculator = new Calculator();
         File folder = new File("src/test/resources/");
-        var pathnames = folder.list();
+        var pathNames = folder.list();
+        assert pathNames != null;
 
-        try {
-            Arrays.stream(pathnames).forEach(expressionFile -> {
+        for(String expressionFile: pathNames) {
+            try {
                 calculator.load(expressionFile);
                 calculator.process();
-            });
-        } catch ( ArithmeticException e) {
-            System.out.println(e.toString());
+            } catch (ArithmeticException e) {
+                System.out.println(e.toString());
+            }
         }
     }
 }
