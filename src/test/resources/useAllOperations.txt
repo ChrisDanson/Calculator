@@ -1,0 +1,5 @@
+multiply 10
+subtract 200
+add 50
+divide 2
+apply 10

@@ -1,0 +1,2 @@
+divide 2
+apply 8
