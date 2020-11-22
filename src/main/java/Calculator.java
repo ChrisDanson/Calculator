@@ -7,7 +7,7 @@ import static java.util.Collections.emptyList;
 public class Calculator {
 
     private final Loader loader = new Loader();
-    private ResultWriter resultWriter = new ResultWriter();
+    private final ResultWriter resultWriter = new ResultWriter();
     private List<Pair<MathOperation, BigDecimal>> operations = emptyList();
     private BigDecimal result;
 
